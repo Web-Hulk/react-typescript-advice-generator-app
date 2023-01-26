@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+$lightCyan: hsl(193, 38%, 86%);
+$neonGreen: hsl(150, 100%, 66%);
+$grayishBlue: hsl(217, 19%, 38%);
+$darkGrayishBlue: hsl(217, 19%, 24%);
+$darkBlue: hsl(218, 23%, 16%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: $darkBlue;
+  color: $lightCyan;
+
+  .main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .container {
+      background-color: $darkGrayishBlue;
+      width: 90%;
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: center;
+      border-radius: 20px;
+      padding: 0 25px;
+      position: relative;
+
+      .container__header {
+        color: $neonGreen;
+        text-transform: uppercase;
+        margin: 30px 0;
+        letter-spacing: 5px;
+        font-size: 12px;
+      }
+
+      .container__paragraph {
+        font-size: 28px;
+        margin-bottom: 30px;
+      }
+
+      .container__divider {
+        width: 100%;
+      }
+
+      .divider {
+        background-image: url('../../assets/pattern-divider-mobile.svg');
+        width: 100%;
+        height: 100%;
+        min-height: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+
+      .container__button {
+        display: inline-block;
+        position: relative;
+        top: 30px;
+        width: 60px;
+        height: 60px;
+
+        .button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: $neonGreen;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 475px) {
+  body {
+    .main {
+      .container {
+        .divider {
+          background-image: url('../../assets/pattern-divider-desktop.svg');
+        }
+      }
+    }
+  }
+}
